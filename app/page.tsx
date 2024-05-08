@@ -36,11 +36,14 @@ export default function Home() {
     minute.endsWith("0") || minute.endsWith("5")
       ? "bg-green-500"
       : "bg-red-500";
+
   return (
     <main
-      className={`h-screen flex justify-center items-center ${backgroundColor} text-black`}
+      className={`h-screen w-full flex justify-center items-center ${backgroundColor} text-black text-center`}
     >
-      <h1 className="text-9xl font-bold">{time}</h1>
+      <h1 className="text-[10vw] font-bold whitespace-nowrap overflow-hidden">
+        {time}
+      </h1>
     </main>
   );
 }
